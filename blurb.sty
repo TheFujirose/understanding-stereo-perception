@@ -1,0 +1,48 @@
+% Provides technical specs on Zed X for the main document
+% See LICENSE on the project homepage for copyright information
+\ProvidesPackage{blurb}
+\usepackage{booktabs} % needed for the specification tables
+\usepackage[capposition=top]{floatrow} % Macro notes for \caption
+
+% Bibliography Resources
+\addbibresource{./bibliography/reports.bib}
+\addbibresource{./bibliography/zedx.bib}
+\addbibresource{./bibliography/textbooks.bib}
+
+\newcommand{\cameraspecs}{
+	\begin{table}[tbp]
+		\begin{floatrow}
+		\ttabbox[\columnwidth]{ %
+		\caption{Zed X Camera Specifications}
+		\label{tab:zedx} 
+		}{ %
+		\begin{tabular}{l l} %left leaning table with 40% width of page
+			\toprule
+			Sensor Type & CMOS \mpfootnotemark \\
+			\midrule
+			Array Size & 1928 x 1208 px \\
+			\midrule
+			Pixel Size & 3 x 3 micrometers \\
+			\midrule
+			Shutter & Electronic Synchronized global shutter \\
+			\midrule
+			Output Format & RAW10 \\
+			\midrule
+			Max S\/N Ratio & 38 dB \\
+			\midrule
+			Dynamic Range & 71.4dB \\
+			\midrule
+			Responsivity & 22.3Ke\-\/Lux-sec \\
+			\midrule
+			Baseline & 12cm \\
+			\bottomrule
+		\end{tabular} %
+		\footnotetext{
+			Data from technical specification \parencite{StereoLabs_2023}.
+		}%
+		\footnotetext[1]{
+			Specifically retrieved from Neousys Technology article \parencite{Neousys}.}%
+		}
+	\end{floatrow}
+	\end{table}
+}
