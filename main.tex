@@ -1,0 +1,41 @@
+% See LICENSE in project root for copyright details
+\documentclass[twocolumn, letterpaper]{scrartcl}
+
+% Packages
+\usepackage[style=apa,backend=biber]{biblatex} % citation
+\usepackage[canadian]{babel}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{csquotes}
+\usepackage{outlines}
+\usepackage{blurb}
+\usepackage{lipsum} % temporary
+%Document
+\begin{document}
+	\title{Perception with Zed X}
+	\author{Carson Fujita}
+	\date{}
+
+	\maketitle
+	\section*{Introduction to Perception}
+	\lipsum[1]
+	\subsection*{Camera Specifications}
+	There a 3 steps to digital camera functions:
+	\begin{enumerate}
+		\item itegration
+		\item collection
+		\item reading
+		\item amplification
+		\item imaging
+		\item buffering (optional)
+	\end{enumerate}
+	In integration, light must reach an array of photodiodes to (generate a charge?) these diodes are slightly more senstive to the infrared end of the visible light spectrum having a range of 400-1000 nm. Then the reading process begins by a collection of charges from the photodiodes read by a specialized chip that varies on the model of camera; charge coupled device (CCD) or complementary metal oxide on silicon (CMOS). Finally, the signals are amplified and sent out through an imaging chip \parencite[p. 143]{SIEGWART2011}. 
+
+	Camera configurations change the result of this process. For example, the duration of this period and amount of light exposed to the diodes are critical to the results; it's important to regulate the amount of photons. When too much light is processed in the collection step this causes blooming where the saturation of the light in the collection causes light to leak to adject pixels in it's array. modifying the intergration and collection This can be done by changing the aperture (iris position) and shutter speed to modify the integration phase and collection phase respectively \parencite[p.143-145]{SIEGWART2011}
+
+	\subsection*{Zed X}
+	The Zed X is an enviromentally sealed stereo camera using complementary metal oxide semicoductor chip (CMOS) sensors \footcite{StereoLabs_2023}\footcite[paragraph 1]{Neousys}.
+	As shown in Table \ref{tab:zedx}, the Zedx CMOS has a array size of 1928 x 1208 photodiodes. 	
+
+	\cameraspecs
+
+\end{document}
